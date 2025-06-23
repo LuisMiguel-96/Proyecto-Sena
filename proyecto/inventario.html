@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sttlecss.css">
+    <link rel="icon" type="images.jpg" href="./images/Ama.jpeg">
+
+</head>
+<body>
+<section id="container">
+<header class="Logo">
+            <a href="index.html">
+                <img
+                src="images/Logo.Amay.jpg"
+                title="Logo corporativo de Ama Chocolates"
+                alt="Logo corporativo de Ama Chocolates"
+                width=800px
+                height=125px>
+        </a>
+</header>
+<aside >
+    <div class="Atras">
+        <a href="index.html">Atras</a>
+         </div>
+    <dialog id="dialog">
+        <h1>Inventario</h1>
+        <p>En esta pestaña encontraras accesos referentes a temas del stock</p>
+        <button id="hide">Cerrar</button>
+    </dialog>
+    <button id="show">información</button>
+    <script>
+        window.show.addEventListener('click',()=>{
+            window.dialog.showModal()
+        })
+        window.hide.addEventListener('click', ()=>{
+            window.dialog.close()
+        })
+    </script>
+</aside>
+<main>
+    <article>
+        <ul class="Menuint">
+            <li><a href="./Inventario/MercanciaIngresada.php">Mercancia Ingresada</a></li>
+            <li><a href="./Inventario/MercanciaFacturada.php">Mercancia Facturada</a></li>
+            <li><a href="./Inventario/StockTotal.php">Stock Total</a></li>
+        </ul>
+    </article>          
+</main>
+<footer>
+            <ul>
+                <a href="mailto: aiacontable@gmail.com"
+                target="_blank"
+                rel="noreferrer">Enviame un correo</a>
+                <a href="Cel:+573223120271"
+                target="_blank"
+                rel="noreferrer">Llamar por telefono</a>
+                <a href ="https://www.facebook.com/share/aB2vzVfSP7ZEB8zv/"
+                target="_blank"
+                rel="noreferrer">Facebook</a>
+                <a href="https://www.instagram.com/amay_chocolates?igsh=d3Y2NG1rdmF5bDRt"
+                target="_blank"
+                rel="noreferrer">Instagram</a>
+                <li>Direccion Oficina: Cra 50 #99SUR 221 SEGUNDO PISO, La Tablaza, La Estrella, Antioquia</li>
+                <li>Telefono <contacto:>3223120271</contacto:></li>    
+                </ul>
+</footer>
+</section>
+</body>
+</html>

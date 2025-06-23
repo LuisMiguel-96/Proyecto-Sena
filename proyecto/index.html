@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMA CHOCOLATES</title>
+    <link rel="stylesheet" href="sttlecss.css">
+    <link rel="icon" type="images.jpg" href="./images/Ama.jpeg">
+
+</head>
+<body>
+<section id="container">
+<header class="Logo">
+            <a href="index.html">
+                <img
+                src="images/Logo.Amay.jpg"
+                title="Logo corporativo de Ama Chocolates"
+                alt="Logo corporativo de Ama Chocolates"
+                width=800px
+                height=125px>
+        </a>
+</header>
+<aside class="Menu">
+     <nav>  
+        <ul>
+            <li> <a href="inventario.html"> Inventario </a></li>
+            <li> <a href="Clientes.html"> Clientes </a></li>
+            <li> <a href="IngresoMercancia.php"> Ingreso de Mercancia </a></li>
+            <li> <a href="Devoluciones.html"> Devoluciones </a></li>  
+            <li> <a href="crearPedido.php"> Crear Pedido </a></li>  
+          </ul>
+    </nav>
+</aside>
+<main>
+                <section>
+                 <h2> MISIÓN</h2>
+                  <p>
+                  Brindar productos y servicios integrales con responsabilidad social, sostenibilidad y confianza,
+                  enfocado en valores éticos que conlleven a la satisfacción de nuestros clientes y colaboradores.
+                  </p>
+                  <h2>VISIÓN</h2>
+                  <p>
+                  <strong>AGROSERVICIOS INTEGRALES ANTIOQUIA S.A.S.</strong> será una sociedad que aporte al cambio en zonas afectadas por el conflicto,
+                  contribuyendo a la reconstrucción del tejido social con enfoque sostenible y sostenido en el tiempo.
+                  </p>
+                </section>
+                  <dialog id="dialog">
+                      <h1>¿Sabias que aqui puedes encontrar nuestros producto<s?</h1>
+                      <small>¡Y es chocolate de la mas alta calidad!</small>
+                      <a href="https://www.instagram.com/amay_chocolates?igsh=d3Y2NG1rdmF5bDRt"
+                  target="_blank"
+                  rel="noreferrer">AMA Chocolate</a>
+                      <button id="hide">Cerrar</button>
+                  </dialog>
+                  <button id="show">Ver información</button>
+                  <script>
+                      window.show.addEventListener('click',()=>{
+                          window.dialog.showModal()
+                      })
+                      window.hide.addEventListener('click', ()=>{
+                          window.dialog.close()
+                      })
+                  </script>
+                   <article>
+                    <h4>
+                     El color del cacao en zonas de conflicto
+                     </h4>
+                     <p>
+                         Ama apoyando el esfuerzo de los campesinos que desean cambiar
+                         los tiempos de <em>"guerra"</em> por nuevas oportunidades
+                     </p>
+                     <video class="video"
+                         muted
+                         autoplay
+                         loop
+                         width="400"
+                         height="400"
+                         controls
+                         src="images/Video_Ama.2.mp4">
+                     </video>
+                 </article>
+                
+</main>
+<footer>
+            <ul>
+                <a href="mailto: aiacontable@gmail.com"
+                target="_blank"
+                rel="noreferrer">Enviame un correo</a>
+                <a href="Cel:+573223120271"
+                target="_blank"
+                rel="noreferrer">Llamar por telefono</a>
+                <a href ="https://www.facebook.com/share/aB2vzVfSP7ZEB8zv/"
+                target="_blank"
+                rel="noreferrer">Facebook</a>
+                <a href="https://www.instagram.com/amay_chocolates?igsh=d3Y2NG1rdmF5bDRt"
+                target="_blank"
+                rel="noreferrer">Instagram</a>
+                <li>Direccion Oficina: Cra 50 #99SUR 221 SEGUNDO PISO, La Tablaza, La Estrella, Antioquia</li>
+                <li>Telefono <contacto:>3223120271</contacto:></li>    
+                </ul>
+</footer>
+</section>
+</body>
+</html>

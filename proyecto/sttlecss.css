@@ -1,0 +1,445 @@
+/* Variables para colores de la marca */
+:root {
+    --primary-color: #8a4e32; /* Marrón chocolate */
+    --secondary-color: #d68b50; /* Naranja chocolate */
+    --accent-color: #cf750e; /* Naranja más intenso */
+    --background-color: #f8f3e9; /* Crema suave */
+    --text-color: #3e2723; /* Marrón oscuro para texto */
+    --light-color: #fff; /* Blanco */
+    --border-color: #c7a17a; /* Tono chocolate claro */
+    --success-color: #86ac41; /* Verde oliva */
+    --danger-color: #c02950; /* Rojo oscuro */
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --border-radius: 8px;
+  }
+  
+  /* Estilos generales */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Vollkorn', sans-serif;
+  }
+  
+  body {
+    background: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Vollkorn', 'Georgia', serif;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+  }
+  
+  a:hover {
+    color: var(--accent-color);
+  }
+  
+  /* Estructura de grid para el contenedor principal */
+  #container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+      "header header"
+      "sidebar content"
+      "footer footer";
+    min-height: 100vh;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  /* Responsive para dispositivos móviles */
+  @media (max-width: 768px) {
+    #container {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+        "header"
+        "sidebar"
+        "content"
+        "footer";
+    }
+  }
+  
+  /* Estilos para la cabecera */
+  header.Logo {
+    grid-area: header;
+    background: linear-gradient(135deg, var(--background-color) 0%, var(--secondary-color) 100%);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+  }
+  
+  header.Logo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+  }
+  
+  header.Logo img:hover {
+    transform: scale(1.01);
+  }
+  
+  /* Estilos para el menú lateral */
+  aside {
+    grid-area: sidebar;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    align-self: start;
+  }
+  
+  .Atras a {
+    display: block;
+    background-color: var(--accent-color);
+    color: var(--light-color);
+    font-weight: bold;
+    padding: 0.8rem;
+    border-radius: 50px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+  }
+  
+  .Atras a:hover {
+    background-color: var(--light-color);
+    color: var(--accent-color);
+    transform: translateY(-2px);
+  }
+  
+  /* Estilos para el menú principal */
+  .Menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .Menu li {
+    width: 100%;
+  }
+  
+  .Menu a {
+    display: block;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    color: var(--light-color);
+    font-weight: 500;
+    text-align: center;
+    transition: var(--transition);
+  }
+  
+  .Menu a:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Estilos para el contenido principal */
+  main {
+    grid-area: content;
+    background-color: var(--light-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+  }
+  
+  /* Estilos para el menú interno */
+  .Menuint {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1rem 0;
+  }
+  
+  .Menuint li {
+    list-style: none;
+  }
+  
+  .Menuint a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--light-color);
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+  }
+  
+  .Menuint a:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilos para el pie de página */
+  footer {
+    grid-area: footer;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--light-color);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin-top: 1.5rem;
+    box-shadow: var(--shadow);
+  }
+  
+  footer ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    list-style: none;
+  }
+  
+  footer a {
+    display: block;
+    color: var(--light-color);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+  }
+  
+  footer a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  footer li {
+    padding: 0.5rem 0;
+    color: var(--light-color);
+  }
+  
+  /* Estilos para formularios */
+  fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  legend {
+    padding: 0 1rem;
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  .control {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--light-color);
+    color: var(--text-color);
+    transition: var(--transition);
+  }
+  
+  .control:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(207, 117, 14, 0.2);
+  }
+  
+  select.control {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238a4e32' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    margin-right: 1rem;
+  }
+  
+  .btn:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  button[type="reset"] {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  button[type="reset"]:hover {
+    background-color: var(--border-color);
+    color: var(--light-color);
+  }
+  
+  /* Estilos para diálogos */
+  dialog {
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-width: 80%;
+    background-color: var(--light-color);
+  }
+  
+  dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  dialog h1 {
+    margin-top: 0;
+    color: var(--primary-color);
+  }
+  
+  dialog button {
+    background-color: var(--accent-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: var(--transition);
+  }
+  
+  dialog button:hover {
+    background-color: var(--primary-color);
+  }
+  
+  button#show {
+    background-color: var(--accent-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: var(--transition);
+  }
+  
+  button#show:hover {
+    background-color: var(--primary-color);
+  }
+  
+  /* Estilos para áreas de texto */
+  .novedades-container {
+    margin-top: 1.5rem;
+  }
+  
+  .novedades-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+  }
+  
+  .novedades {
+    width: 100%;
+    min-height: 150px;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--light-color);
+    resize: vertical;
+    margin-bottom: 1rem;
+    transition: var(--transition);
+  }
+  
+  .novedades:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(207, 117, 14, 0.2);
+  }
+  
+  /* Estilos para artículos y secciones */
+  article {
+    margin-bottom: 2rem;
+  }
+  
+  section {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Estilos para videos */
+  .video {
+    max-width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+  }
+  
+  /* Animaciones para imágenes */
+  .imagen {
+    animation: flotar 4s ease-in-out infinite;
+  }
+  
+  @keyframes flotar {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Estilos para tablas */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+  }
+  
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  th {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+  }
+  
+  tr:nth-child(even) {
+    background-color: rgba(138, 78, 50, 0.05);
+  }
+  
+  tr:hover {
+    background-color: rgba(138, 78, 50, 0.1);
+  }
